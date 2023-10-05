@@ -19,5 +19,9 @@ go run . -ab_path './AssetBundles_Windows'
     指定最大并发数 (default 20)
 ```
 
+# Question
+1. Q: 如何解密音频文件？  
+A: 请参考这个Issues [关于其他资源文件 #1](https://github.com/nijinekoyo/GF2AssetBundleDecryption/issues/1)
+
 ## Thanks
 1. [GF2Decrypter](https://github.com/66hh/GF2Decrypter) 提供了解密数据的思路
