@@ -19,11 +19,11 @@ import (
 
 func main() {
 	AssetBundlePath := flag.String("ab_path", "./AssetBundles_Windows", "指定AssetBundle文件夹路径")
-	DecryptedPath := flag.String("decrypted_path", "./decrypted_output", "指定解密后文件夹路径")
+	AssetBundleDecryptedPath := flag.String("ab_decrypted_path", "./ab_decrypted_output", "指定AssetBundle文件解密后文件夹路径")
 	MaxPoolNum := flag.Int("max_pool", 20, "指定最大并发数")
 	flag.Parse()
 
-	err := os.MkdirAll(*DecryptedPath, 0666)
+	err := os.MkdirAll(*AssetBundleDecryptedPath, 0666)
 	if err != nil {
 		panic(err)
 	}
@@ -57,7 +57,7 @@ func main() {
 			DecryptedFile := Decryption.AssetBundle(FileData)
 
 			// 写入文件
-			DecryptedFilePath := filepath.Join(*DecryptedPath, filepath.Base(FilePath))
+			DecryptedFilePath := filepath.Join(*AssetBundleDecryptedPath, filepath.Base(FilePath))
 
 			err = os.WriteFile(DecryptedFilePath, DecryptedFile, 0666)
 			if err != nil {

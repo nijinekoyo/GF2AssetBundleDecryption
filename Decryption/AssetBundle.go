@@ -1,20 +1,20 @@
 /*
  * @Author: nijineko
  * @Date: 2023-09-30 22:03:49
- * @LastEditTime: 2023-09-30 23:03:26
+ * @LastEditTime: 2023-10-07 20:22:48
  * @LastEditors: nijineko
- * @Description: 解密工具
- * @FilePath: \GF2AssetBundleDecryption\Decryption\Decryption.go
+ * @Description: AssetBundle解密工具
+ * @FilePath: \GF2AssetBundleDecryption\Decryption\AssetBundle.go
  */
 package Decryption
 
 /**
- * @description: 异或计算
+ * @description: AssetBundle异或计算
  * @param {[]byte} FileData 文件数据
  * @param {[]byte} Key 密钥
  * @return {[]byte} 解密后的数据
  */
-func XOR(FileData []byte, Key []byte) []byte {
+func AssetBundleXOR(FileData []byte, Key []byte) []byte {
 	var Size int
 	if len(Key) < len(FileData) {
 		Size = len(Key)
@@ -38,7 +38,7 @@ func AssetBundle(FileData []byte) []byte {
 	Key := []byte{0x55, 0x6E, 0x69, 0x74, 0x79, 0x46, 0x53, 0x00, 0x00, 0x00, 0x00, 0x07, 0x35, 0x2E, 0x78, 0x2E}
 
 	// XOR计算文件密钥
-	FileKey := XOR(FileData, Key)
+	FileKey := AssetBundleXOR(FileData, Key)
 
 	// 解密文件
 	var Size int
