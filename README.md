@@ -15,7 +15,7 @@ go run . -ab_path './AssetBundles_Windows'
 ```
 
 ### 剧情文本解析模式
-将程序放置在`GF2Exilium\GF2 Game\GF2_Exilium_Data\LocalCache\Data\Table`文件夹下，执行以下命令即可，解析后的json文件位于`table_decrypted_output`文件夹  
+将程序放置在`GF2Exilium\GF2 Game\GF2_Exilium_Data\LocalCache\Data`文件夹下，执行以下命令即可，解析后的json文件位于`table_decrypted_output`文件夹  
 *`Table`文件夹的内容需要启动游戏后才会下载*
 ```
 .\GF2AssetBundleDecryption.exe -model story -table_path './Table'
