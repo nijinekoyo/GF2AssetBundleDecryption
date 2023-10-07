@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package="./Decryption/Proto;Proto";
+
+message TextMapTable {
+    repeated TextMap Data = 1;
+}
+
+message TextMap {
+    int64 Id = 1;
+    string Content = 2;
+}

@@ -16,4 +16,5 @@
 # vendor/
 
 /build
-/decrypted_output
+/ab_decrypted_output
+/table_decrypted_output
